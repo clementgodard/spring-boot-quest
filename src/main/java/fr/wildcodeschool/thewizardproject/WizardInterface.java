@@ -4,4 +4,5 @@ public interface WizardInterface
 {	
 	public String giveAdvice();
 	public void changeDress(Outfit clothes);
+	public Outfit getDress();
 }

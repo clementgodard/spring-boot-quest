@@ -22,9 +22,9 @@ public class Dumbledore implements WizardInterface{
 	public void changeDress(Outfit clothes) {
 		this.clothes = clothes;
 	}
-	
-	public Outfit getOutfit() {
+
+	@Override
+	public Outfit getDress() {
 		return this.clothes;
 	}
-
 }

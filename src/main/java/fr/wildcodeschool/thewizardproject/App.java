@@ -14,19 +14,21 @@ public class App
 	public void start()
 	{
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath*:applicationContext.xml");
-        // Book myBook = context.getBean("theBook", Book.class);
-        Gandalf wizard = (Gandalf) context.getBean("Gandalf", WizardInterface.class);
-        context.close();
-        System.out.println("******************");
-        System.out.println(wizard.giveAdvice());
-        System.out.println(wizard.getOutfit());
         
         Outfit clothes = new Outfit("black");
         
-        wizard.changeDress(clothes);
+        WizardInterface dumb = context.getBean("Dumbledore", WizardInterface.class);
+        WizardInterface gand = context.getBean("Gandalf", WizardInterface.class);
         
-        System.out.println(wizard.getOutfit());
+        context.close();
         
+        System.out.println("******************");
+        System.out.println(dumb.giveAdvice());
+        System.out.println(dumb.getDress());
+        
+        dumb.changeDress(clothes);
+        
+        System.out.println(dumb.getDress());
         System.out.println("******************");
 	}
 }

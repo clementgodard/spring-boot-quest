@@ -23,7 +23,8 @@ public class Gandalf implements WizardInterface{
 		this.clothes = clothes;
 	}
 	
-	public Outfit getOutfit() {
+	@Override
+	public Outfit getDress() {
 		return this.clothes;
 	}
 

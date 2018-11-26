@@ -1,14 +1,9 @@
 package fr.wildcodeschool.thewizardproject;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-@Component("Gandalf")
 public class Gandalf implements WizardInterface{
 
 	private Outfit clothes;
 	
-	@Autowired
 	public Gandalf(Outfit clothes) {
 		this.changeDress(clothes);
 	}

@@ -6,7 +6,19 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="fr.wildcodeschool.thewizardproject">
-    </context:component-scan>
+    <!-- Bean of the dependency -->
+    <bean id="outfit" class="fr.wildcodeschool.thewizardproject.Outfit">
+    </bean>
+
+    <!-- Bean of the book -->
+    <bean id="dumbledore" class="fr.wildcodeschool.thewizardproject.Dumbledore">
+        <!-- Injection in the constructor : -->
+        <constructor-arg ref="outfit"/>
+    </bean>
+    
+    <bean id="gandalf" class="fr.wildcodeschool.thewizardproject.Gandalf">
+        <!-- Injection in the constructor : -->
+        <constructor-arg ref="outfit"/>
+    </bean>
 
 </beans>

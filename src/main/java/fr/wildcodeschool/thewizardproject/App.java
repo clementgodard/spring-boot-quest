@@ -17,18 +17,18 @@ public class App
         
         Outfit clothes = new Outfit("black");
         
-        WizardInterface dumb = context.getBean("Dumbledore", WizardInterface.class);
-        WizardInterface gand = context.getBean("Gandalf", WizardInterface.class);
+        WizardInterface dumb = context.getBean("dumbledore", WizardInterface.class);
+        WizardInterface gand = context.getBean("gandalf", WizardInterface.class);
         
         context.close();
         
         System.out.println("******************");
-        System.out.println(dumb.giveAdvice());
-        System.out.println(dumb.getDress());
+        System.out.println(gand.giveAdvice());
+        System.out.println(gand.getDress());
         
-        dumb.changeDress(clothes);
+        gand.changeDress(clothes);
         
-        System.out.println(dumb.getDress());
+        System.out.println(gand.getDress());
         System.out.println("******************");
 	}
 }
